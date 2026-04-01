@@ -2,7 +2,7 @@
 
 **A Full-Stack YouTube-Inspired Video Sharing Platform**
 
-🚀 **Live Demo:** [https://youtube-frontend-git-main-siyakavad54-6810s-projects.vercel.app/](https://youtube-frontend-git-main-siyakavad54-6810s-projects.vercel.app/)
+🚀 **Live Demo:** [https://youtubeclones-ten.vercel.app/register](https://youtubeclones-ten.vercel.app/register)
 
 This is a modern, feature-rich multimedia platform that brings the core functionality of YouTube to life with a clean, responsive interface and robust backend architecture. Built with the MERN stack, it offers seamless video streaming, user engagement features, and comprehensive content management.
 

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "backend/src/app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1775036767625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1775036767625,
+            "name": "Commit-0",
+            "content": "import express from \"express\"\nimport cors from \"cors\"\nimport cookieParser from \"cookie-parser\"\n\nconst app = express()\n\napp.use(cors({\n    origin: function (origin, callback) {\n        const allowedOrigins = [\n            process.env.CORS_ORIGIN,\n            \"https://youtubeclones-ten.vercel.app\",\n            \"http://localhost:5173\",\n            \"http://localhost:3000\"\n        ].filter(Boolean);\n        \n        // Allow requests with no origin (like mobile apps or curl) \n        // or any origin that matches the environment variable, or all origins for development\n        if (!origin || allowedOrigins.includes(origin) || process.env.NODE_ENV !== 'production') {\n            callback(null, true);\n        } else {\n            callback(null, true);\n        }\n    },\n    credentials: true\n}))\n\napp.use(express.json({limit: \"16kb\"}))\napp.use(express.urlencoded({extended: true, limit: \"16kb\"}))\napp.use(express.static(\"public\"))\napp.use(cookieParser())\n\n\n//routes import\nimport userRouter from './routes/user.routes.js'\nimport healthcheckRouter from \"./routes/healthcheck.routes.js\"\nimport tweetRouter from \"./routes/tweet.routes.js\"\nimport subscriptionRouter from \"./routes/subscription.routes.js\"\nimport videoRouter from \"./routes/video.routes.js\"\nimport commentRouter from \"./routes/comment.routes.js\"\nimport likeRouter from \"./routes/like.routes.js\"\nimport playlistRouter from \"./routes/playlist.routes.js\"\nimport dashboardRouter from \"./routes/dashboard.routes.js\"\n\n//routes declaration\napp.use(\"/api/v1/healthcheck\", healthcheckRouter)\napp.use(\"/api/v1/users\", userRouter)\napp.use(\"/api/v1/tweets\", tweetRouter)\napp.use(\"/api/v1/subscriptions\", subscriptionRouter)\napp.use(\"/api/v1/videos\", videoRouter)\napp.use(\"/api/v1/comments\", commentRouter)\napp.use(\"/api/v1/likes\", likeRouter)\napp.use(\"/api/v1/playlist\", playlistRouter)\napp.use(\"/api/v1/dashboard\", dashboardRouter)\n\n// http://localhost:8000/api/v1/users/register\n\nexport { app }"
+        }
+    ]
+}
