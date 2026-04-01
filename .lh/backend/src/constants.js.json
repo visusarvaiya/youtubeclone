@@ -1,0 +1,22 @@
+{
+    "sourceFile": "backend/src/constants.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1775034405384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1775034411515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-export const DB_NAME = \"\"\n\\ No newline at end of file\n+export const DB_NAME = \"vishva\"\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1775034405384,
+            "name": "Commit-0",
+            "content": "export const DB_NAME = \"\""
+        }
+    ]
+}

@@ -1,1 +1,1 @@
-export const DB_NAME = "axoryn"
+export const DB_NAME = "vishva"
